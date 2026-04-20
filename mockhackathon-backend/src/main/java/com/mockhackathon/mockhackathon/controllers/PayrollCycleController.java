@@ -1,10 +1,10 @@
 import com.mockhackathon.mockhackathon.controllers;
 
-import com.guvi.payroll.dto.PayrollCycleDTO;
-import com.guvi.payroll.entity.PayrollCycle;
-import com.guvi.payroll.model.PayrollStatus;
-import com.guvi.payroll.repository.PayrollCycleRepository;
-import com.guvi.payroll.service.PayrollService;
+import com.mockhackathon.mockhackathon.dto.PayrollCycleDTO;
+import com.mockhackathon.mockhackathon.entity.PayrollCycle;
+import com.mockhackathon.mockhackathon.model.PayrollStatus;
+import com.mockhackathon.mockhackathon.repository.PayrollCycleRepository;
+import com.mockhackathon.mockhackathon.service.PayrollService;
 import jakarta.validation.Valid;
 import lombok.RequiredArgsConstructor;
 import org.springframework.http.ResponseEntity;

@@ -1,10 +1,10 @@
 import com.mockhackathon.mockhackathon.controllers;
 
-import com.guvi.payroll.dto.TaxComputationDTO;
-import com.guvi.payroll.entity.TaxComputation;
-import com.guvi.payroll.entity.User;
-import com.guvi.payroll.repository.TaxComputationRepository;
-import com.guvi.payroll.repository.UserRepository;
+import com.mockhackathon.mockhackathon.dto.TaxComputationDTO;
+import com.mockhackathon.mockhackathon.entity.TaxComputation;
+import com.mockhackathon.mockhackathon.entity.User;
+import com.mockhackathon.mockhackathon.repository.TaxComputationRepository;
+import com.mockhackathon.mockhackathon.repository.UserRepository;
 import lombok.RequiredArgsConstructor;
 import org.springframework.http.ResponseEntity;
 import org.springframework.web.bind.annotation.*;

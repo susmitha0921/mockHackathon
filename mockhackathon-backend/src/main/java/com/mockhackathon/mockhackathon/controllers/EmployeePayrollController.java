@@ -1,14 +1,14 @@
 import com.mockhackathon.mockhackathon.controllers;
 
-import com.guvi.payroll.dto.EmployeePayrollDTO;
-import com.guvi.payroll.dto.SalaryBreakupDTO;
-import com.guvi.payroll.entity.EmployeePayroll;
-import com.guvi.payroll.entity.PayrollCycle;
-import com.guvi.payroll.entity.User;
-import com.guvi.payroll.repository.EmployeePayrollRepository;
-import com.guvi.payroll.repository.PayrollCycleRepository;
-import com.guvi.payroll.repository.SalaryBreakupRepository;
-import com.guvi.payroll.repository.UserRepository;
+import com.mockhackathon.mockhackathon.dto.EmployeePayrollDTO;
+import com.mockhackathon.mockhackathon.dto.SalaryBreakupDTO;
+import com.mockhackathon.mockhackathon.entity.EmployeePayroll;
+import com.mockhackathon.mockhackathon.entity.PayrollCycle;
+import com.mockhackathon.mockhackathon.entity.User;
+import com.mockhackathon.mockhackathon.repository.EmployeePayrollRepository;
+import com.mockhackathon.mockhackathon.repository.PayrollCycleRepository;
+import com.mockhackathon.mockhackathon.repository.SalaryBreakupRepository;
+import com.mockhackathon.mockhackathon.repository.UserRepository;
 import lombok.RequiredArgsConstructor;
 import org.springframework.http.ResponseEntity;
 import org.springframework.web.bind.annotation.*;
@@ -67,7 +67,7 @@ public class EmployeePayrollController {
         EmployeePayroll payroll = employeePayrollRepository.findById(id)
                 .orElseThrow(() -> new RuntimeException("Payroll record not found"));
 
-        payroll.setPayoutStatus(com.guvi.payroll.model.PayoutStatus.PROCESSED);
+        payroll.setPayoutStatus(com.mockhackathon.mockhackathon.model.PayoutStatus.PROCESSED);
         payroll.setPaidAt(java.time.LocalDateTime.now());
         payroll.setBankReference("REF-" + System.currentTimeMillis());
 
@@ -82,8 +82,8 @@ public class EmployeePayrollController {
         List<EmployeePayroll> payrolls = employeePayrollRepository.findByPayrollCycle(cycle);
         int count = 0;
         for (EmployeePayroll payroll : payrolls) {
-            if (payroll.getPayoutStatus() == com.guvi.payroll.model.PayoutStatus.PENDING) {
-                payroll.setPayoutStatus(com.guvi.payroll.model.PayoutStatus.PROCESSED);
+            if (payroll.getPayoutStatus() == com.mockhackathon.mockhackathon.model.PayoutStatus.PENDING) {
+                payroll.setPayoutStatus(com.mockhackathon.mockhackathon.model.PayoutStatus.PROCESSED);
                 payroll.setPaidAt(java.time.LocalDateTime.now());
                 payroll.setBankReference("REF-" + System.currentTimeMillis());
                 count++;

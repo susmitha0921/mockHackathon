@@ -1,8 +1,8 @@
 import com.mockhackathon.mockhackathon.controllers;
 
-import com.guvi.payroll.entity.*;
-import com.guvi.payroll.model.*;
-import com.guvi.payroll.repository.*;
+import com.mockhackathon.mockhackathon.entity.*;
+import com.mockhackathon.mockhackathon.model.*;
+import com.mockhackathon.mockhackathon.repository.*;
 import lombok.RequiredArgsConstructor;
 import org.springframework.http.ResponseEntity;
 import org.springframework.security.crypto.password.PasswordEncoder;
