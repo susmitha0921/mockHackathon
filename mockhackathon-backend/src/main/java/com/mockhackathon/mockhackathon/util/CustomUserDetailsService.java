@@ -1,7 +1,7 @@
 package com.mockhackathon.mockhackathon.util;
 
-import com.mockhackathon.mockhackathon.entity.User;
-import com.mockhackathon.mockhackathon.repository.UserRepository;
+import com.guvi.payroll.entity.User;
+import com.guvi.payroll.repository.UserRepository;
 import lombok.RequiredArgsConstructor;
 import org.springframework.security.core.authority.SimpleGrantedAuthority;
 import org.springframework.security.core.userdetails.UserDetails;

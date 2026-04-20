@@ -1,7 +1,7 @@
 package com.mockhackathon.mockhackathon.config;
 
-import com.mockhackathon.mockhackathon.util.AuthTokenFilter;
-import com.mockhackathon.mockhackathon.util.CustomUserDetailsService;
+import com.guvi.payroll.util.AuthTokenFilter;
+import com.guvi.payroll.util.CustomUserDetailsService;
 import lombok.RequiredArgsConstructor;
 import org.springframework.context.annotation.Bean;
 import org.springframework.context.annotation.Configuration;

@@ -1,9 +1,9 @@
 import com.mockhackathon.mockhackathon.controllers;
 
-import com.mockhackathon.mockhackathon.dto.UserDTO;
-import com.mockhackathon.mockhackathon.entity.User;
-import com.mockhackathon.mockhackathon.model.Role;
-import com.mockhackathon.mockhackathon.repository.UserRepository;
+import com.guvi.payroll.dto.UserDTO;
+import com.guvi.payroll.entity.User;
+import com.guvi.payroll.model.Role;
+import com.guvi.payroll.repository.UserRepository;
 import jakarta.validation.Valid;
 import lombok.RequiredArgsConstructor;
 import lombok.extern.slf4j.Slf4j;
@@ -22,7 +22,7 @@ public class UserController {
 
     private final UserRepository userRepository;
     private final org.springframework.security.authentication.AuthenticationManager authenticationManager;
-    private final com.mockhackathon.mockhackathon.util.JwtUtils jwtUtils;
+    private final com.guvi.payroll.util.JwtUtils jwtUtils;
     private final org.springframework.security.crypto.password.PasswordEncoder passwordEncoder;
 
     @PostMapping("/login")
